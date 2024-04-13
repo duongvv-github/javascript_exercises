@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function scope example</title>
+  </head>
+<body>
+
+  <script>
+    const x = 1;
+
+    function a() {
+      const y = 2;
+      output(x);
+    }
+
+    function b() {
+      const z = 3;
+      output(z);
+    }
+
+    function output(value) {
+      const para = document.createElement('p');
+      document.body.appendChild(para);
+      para.textContent = `Value: ${value}`;
+    }
+
+    function squared(num) {
+        return num*num
+    }
+
+    const square = (x=2) => x*x;
+
+    console.log(square(5))
+  </script>
+</body>
+</html>
